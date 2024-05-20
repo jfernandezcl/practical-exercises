@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { ListOfUsers } from "./components/ListOFUsers/ListOfUsers";
+import { Title } from "./components/Title/Title";
 import { useDataAPI } from "./components/hooks/useDataAPI";
 
 export function App() {
@@ -9,7 +10,7 @@ export function App() {
   return (
     <main>
       <div>
-        <h1>API user data</h1>
+        <Title title={"API user data"} />
       </div>
       <section>
         <div>
