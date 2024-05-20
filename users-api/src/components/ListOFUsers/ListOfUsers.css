@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+}
+
+.users-card {
+    background-color: #428e64;
+}
+
+.container-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-left: 8px;
+}

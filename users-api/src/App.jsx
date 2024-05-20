@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/Title/Title.css";
 
 import { ListOfUsers } from "./components/ListOFUsers/ListOfUsers";
 import { Title } from "./components/Title/Title";
@@ -9,11 +10,11 @@ export function App() {
 
   return (
     <main>
-      <div>
+      <div className="title-card">
         <Title title={"API user data"} />
       </div>
       <section>
-        <div>
+        <div className="users-card">
           <ListOfUsers data={data} />
         </div>
       </section>
