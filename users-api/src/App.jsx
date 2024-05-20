@@ -6,7 +6,9 @@ import { Title } from "./components/Title/Title";
 import { useDataAPI } from "./components/hooks/useDataAPI";
 
 export function App() {
-  const { data } = useDataAPI("https://jsonplaceholder.typicode.com/users");
+  const { data, loading } = useDataAPI(
+    "https://jsonplaceholder.typicode.com/users"
+  );
 
   return (
     <main>
@@ -15,7 +17,7 @@ export function App() {
       </div>
       <section>
         <div className="users-card">
-          <ListOfUsers data={data} />
+          <ListOfUsers data={data} loading={loading} />
         </div>
       </section>
     </main>
