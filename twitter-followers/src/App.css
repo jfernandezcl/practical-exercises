@@ -40,9 +40,15 @@
   border-radius: 999px;
   padding: 6px 16px;
   font-weight: bold;
+  border: 2px solid rgb(161, 6, 6);
 }
 
 .followCard-button:hover {
   background-color: rgb(80, 147, 247);
   transition: .3s ease background-color;
+}
+
+.is-following {
+  background-color: rgb(140, 224, 140);
+  border: 2px solid rgb(80, 147, 247);
 }
