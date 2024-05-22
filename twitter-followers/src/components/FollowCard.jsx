@@ -1,16 +1,15 @@
-export function followCard({ userName, name, isFollowing }) {
-  const imageSrc = `https://unavatar.io/${userName}`;
-
+export function FollowCard({ children, userName, isFollowing }) {
+  console.log(isFollowing);
   return (
     <article className="followCard">
       <header className="followCard-header">
         <img
           className="followCard-avatar"
           alt="El avatar midudev"
-          src={imageSrc}
+          src={`https://unavatar.io/${userName}`}
         ></img>
         <div className="followCard-info">
-          <strong>{name}</strong>
+          {children}
           <span className="followCard-infoUser">@{userName}</span>
         </div>
       </header>

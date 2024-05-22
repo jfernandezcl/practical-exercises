@@ -3,6 +3,13 @@
   align-items: center;
   color: #fff;
   font-size: .8rem;
+  justify-content: space-between;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .followCard-header {
