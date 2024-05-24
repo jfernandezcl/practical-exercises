@@ -91,10 +91,10 @@ function App() {
       <h1>Three in a row</h1>
       <button onClick={resetGame}>Reset game</button>
       <section className="game">
-        {board.map((_, index) => {
+        {board.map((square, index) => {
           return (
             <Square key={index} index={index} updateBoard={updateBoard}>
-              {board[index]}
+              {square}
             </Square>
           );
         })}
