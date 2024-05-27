@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { Square } from "./components/Square.jsx";
 import { TURNS } from "./constants.js";
@@ -60,7 +60,7 @@ function App() {
   return (
     <main className="board">
       <h1>Three in a row</h1>
-      <button onClick={resetGame}>Reset game</button>
+      <button onClick={resetGame}>RESET GAME</button>
       <section className="game">
         {board.map((square, index) => {
           return (
@@ -74,7 +74,7 @@ function App() {
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
-      <WinnerModal resetGame={resetGame} winner={winner} />;
+      <WinnerModal resetGame={resetGame} winner={winner} />
     </main>
   );
 }
