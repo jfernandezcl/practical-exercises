@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Square } from "./Square.jsx";
 
 export function WinnerModal({ winner, resetGame }) {
