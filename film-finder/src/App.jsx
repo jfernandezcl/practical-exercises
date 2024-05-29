@@ -1,40 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import { Movies } from "./components/Movies.jsx";
 import { useMovies } from "./hooks/useMovies.js";
 
-function App() {
-  const { movies } = useMovies();
-  const [query, setQuery] = useState("");
+function useSearch() {
+  const [search, updateSearch] = useState("");
   const [error, setError] = useState(null);
+  const isFirstInput = useRef(true);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const { query } = Object.fromEntries(new window.FormData(event.target));
-    console.log(query);
-  };
+  useEffect(() => {
+    if (isFirstInput.current) {
+      isFirstInput.current = search === "";
+      return;
+    }
 
-  const handlechange = (event) => {
-    const newQuery = event.target.value;
-    if (newQuery.startsWith(" ")) return;
-    setQuery(newQuery);
-
-    if (newQuery === "") {
+    if (search === "") {
       setError("No se puede buscar una película vacía");
       return;
     }
 
-    if (newQuery.match(/^\d+$/)) {
+    if (search.match(/^\d+$/)) {
       setError("No se puede buscar una película con un número");
       return;
     }
 
-    if (newQuery.length < 3) {
+    if (search.length < 3) {
       setError("La busqueda tiene que tener al menos 3 caracteres");
       return;
     }
 
     setError(null);
+  }, [search]);
+
+  return { search, updateSearch, error };
+}
+
+function App() {
+  const { movies } = useMovies();
+  const { search, updateSearch, error } = useSearch();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log({ search });
+  };
+  const handlechange = (event) => {
+    updateSearch(event.target.value);
   };
 
   return (
@@ -43,13 +53,18 @@ function App() {
         <h1>Buscador de películas</h1>
         <form className="form" onSubmit={handleSubmit}>
           <input
+            style={{
+              border: "1px solid transparent",
+              borderColor: error ? "red" : "transparent",
+            }}
             onChange={handlechange}
-            value={query}
+            value={search}
             name="query"
             placeholder="Avengers, Star Wars, The Matrix..."
           />
           <button type="submit">Buscar</button>
         </form>
+        {error && <p style={{ color: "red" }}>{error}</p>}
       </header>
 
       <main>
