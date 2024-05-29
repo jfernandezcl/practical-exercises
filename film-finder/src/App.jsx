@@ -6,6 +6,7 @@ import { useMovies } from "./hooks/useMovies.js";
 function App() {
   const { movies } = useMovies();
   const [query, setQuery] = useState("");
+  const [error, setError] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +15,25 @@ function App() {
   };
 
   const handlechange = (event) => {
-    setQuery(event.target.value);
+    const newQuery = event.target.value;
+    setQuery(newQuery);
+
+    if (newQuery === "") {
+      setError("No se puede buscar una película vacía");
+      return;
+    }
+
+    if (newQuery.match(/^\d+$/)) {
+      setError("No se puede buscar una película con un número");
+      return;
+    }
+
+    if (newQuery.length < 3) {
+      setError("La busqueda tiene que tener al menos 3 caracteres");
+      return;
+    }
+
+    setError(null);
   };
 
   return (
