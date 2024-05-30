@@ -23,9 +23,3 @@ Primera iteración:
 ✅ Haz que la búsqueda se haga automáticamente al escribir.
 
 ✅ Evita que se haga la búsqueda continuamente al escribir (debounce)
-
-OMDb API:
-
-http://www.omdbapi.com/?i=tt3896198&apikey=95b7d184
-
-Here is your key: 95b7d184
