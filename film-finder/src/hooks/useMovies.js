@@ -1,7 +1,10 @@
-import responseMovies from "../mocks/with-results.json";
-import withouResults from "../mocks/no-results.json";
+import withResults from "../mocks/with-results.json";
+import withoutResults from "../mocks/no-results.json";
+import { useState } from "react";
 
-export function useMovies() {
+export function useMovies({ search }) {
+  const [responseMovies, setResponseMovies] = useState([]);
+
   const movies = responseMovies.Search;
 
   const mappedMovies = movies?.map((movies) => ({
@@ -10,5 +13,14 @@ export function useMovies() {
     year: movies.Year,
     image: movies.Poster,
   }));
-  return { movies: mappedMovies };
+
+  const getMovies = () => {
+    if (search) {
+      setResponseMovies(withResults);
+    } else {
+      setResponseMovies(withoutResults);
+    }
+  };
+
+  return { movies: mappedMovies, getMovies };
 }
