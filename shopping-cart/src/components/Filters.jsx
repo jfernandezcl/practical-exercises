@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Filters.css";
 
-export function Filters(onChange) {
+export function Filters({ onChange }) {
   const [minPrice, setMinPrice] = useState(0);
 
   const handleChangeMinPrice = (event) => {
@@ -38,7 +38,7 @@ export function Filters(onChange) {
 
       <div>
         <label htmlFor="category"></label>
-        <select id="category">
+        <select id="category" onChange={handleChangeCategory}>
           <option value="all">Todas</option>
           <option value="laptops">Portátiles</option>
           <option value="smartphones">Celulares</option>
