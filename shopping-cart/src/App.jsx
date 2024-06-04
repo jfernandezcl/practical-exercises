@@ -3,23 +3,8 @@ import { Products } from "./components/Products.jsx";
 import { useState } from "react";
 import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer.jsx";
-
-function useFilters() {
-  const [filters, setFilters] = useState({
-    category: "all",
-    minPrice: 0,
-  });
-
-  const filterProducts = (products) => {
-    return products.filter((product) => {
-      return (
-        products.price >= filters.minPrice &&
-        (filters.category === "all" || product.category === filters.category)
-      );
-    });
-  };
-  return { filters, filterProducts, setFilters };
-}
+import { useFilters } from "./hooks/useFilters.js";
+import { IS_DEVELOPMENT } from "./config.js";
 
 function App() {
   const [products] = useState(initialProducts);
@@ -30,7 +15,7 @@ function App() {
     <>
       <Header changeFilters={setFilters} />
       <Products products={filteredProducts} />
-      <Footer filter={filters} />
+      {IS_DEVELOPMENT && <Footer filter={filters} />}
     </>
   );
 }
