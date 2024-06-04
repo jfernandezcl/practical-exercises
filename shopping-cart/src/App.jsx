@@ -5,15 +5,17 @@ import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { useFilters } from "./hooks/useFilters.js";
 import { IS_DEVELOPMENT } from "./config.js";
+import { Cart } from "./components/Cart.jsx";
 
 function App() {
   const [products] = useState(initialProducts);
-  const { filters, filterProducts, setFilters } = useFilters();
+  const { filters, filterProducts } = useFilters();
   const filteredProducts = filterProducts(products);
 
   return (
     <>
-      <Header changeFilters={setFilters} />
+      <Header />
+      <Cart />
       <Products products={filteredProducts} />
       {IS_DEVELOPMENT && <Footer filter={filters} />}
     </>
