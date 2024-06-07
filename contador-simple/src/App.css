@@ -3,11 +3,12 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding: 16px;
 }
 
 .title {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 2px 6px;
   background-color: #09f;
   color: white;
@@ -21,4 +22,7 @@
   border: none;
   background-color: #09f;
   color: white;
+  padding: 8px;
+  margin: 16px;
+  border-radius: 4px;
 }

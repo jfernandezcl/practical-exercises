@@ -4,8 +4,12 @@ import "./App.css";
 function App() {
   const [incremento, setIncremento] = useState(0);
 
-  const handleClick = () => {
+  const handleClickIncrease = () => {
     setIncremento(incremento + 1);
+  };
+
+  const handleClickdecrement = () => {
+    setIncremento(incremento - 1);
   };
 
   return (
@@ -16,8 +20,11 @@ function App() {
           <p>Contador : {incremento}</p>
         </div>
         <div>
-          <button className="button" onClick={handleClick}>
+          <button className="button" onClick={handleClickIncrease}>
             Incrementar
+          </button>
+          <button className="button" onClick={handleClickdecrement}>
+            Decrementar
           </button>
         </div>
       </main>
