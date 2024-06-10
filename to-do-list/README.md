@@ -1,8 +1,10 @@
-# React + Vite
+Ejercicio: Lista de Tareas (To-Do List)
+Requisitos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    1. Agregar tareas: Un input de texto y un botón que permita al usuario agregar nuevas tareas a la lista.
 
-Currently, two official plugins are available:
+    2. Mostrar tareas: Una lista donde se muestren todas las tareas agregadas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    3. Eliminar tareas: Un botón junto a cada tarea para poder eliminarla de la lista.
+
+    4. Marcar tareas como completadas: Posibilidad de marcar las tareas como completadas (puedes usar un checkbox o cambiar el estilo de la tarea).
