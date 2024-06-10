@@ -8,6 +8,7 @@ function App() {
   const handleAddTask = () => {
     if (inputValue.trim()) {
       setTasks([...tasks, { text: inputValue, completed: false }]);
+      setInputValue("");
     }
   };
 
@@ -18,6 +19,12 @@ function App() {
   return (
     <div>
       <h1>To do List</h1>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
+      />
+      <button onClick={handleAddTask}>Add task</button>
     </div>
   );
 }
