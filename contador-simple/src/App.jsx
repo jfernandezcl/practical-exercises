@@ -12,6 +12,10 @@ function App() {
     setIncremento(incremento - 1);
   };
 
+  const handleClickReset = () => {
+    setIncremento(0);
+  };
+
   return (
     <>
       <main className="card">
@@ -25,6 +29,9 @@ function App() {
           </button>
           <button className="button" onClick={handleClickdecrement}>
             Decrementar
+          </button>
+          <button className="button" onClick={handleClickReset}>
+            Reset
           </button>
         </div>
       </main>
