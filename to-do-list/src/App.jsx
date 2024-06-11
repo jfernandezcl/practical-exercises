@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import TodoList from "./components/TodoList.jsx";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -12,9 +13,17 @@ function App() {
     }
   };
 
-  const handleDeleteTask = () => {};
+  const handleDeleteTask = (index) => {
+    const newTasks = tasks.filter((task, i) => i !== index);
+    setTasks(newTasks);
+  };
 
-  const handleToggleTask = () => {};
+  const handleToggleTask = (index) => {
+    const newTasks = tasks.map((task, i) =>
+      i === index ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(newTasks);
+  };
 
   return (
     <div>
@@ -25,6 +34,11 @@ function App() {
         onChange={(event) => setInputValue(event.target.value)}
       />
       <button onClick={handleAddTask}>Add task</button>
+      <TodoList
+        tasks={tasks}
+        onDeleteTask={handleDeleteTask}
+        onToggleTask={handleToggleTask}
+      />
     </div>
   );
 }
