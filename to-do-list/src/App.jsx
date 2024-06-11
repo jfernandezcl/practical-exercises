@@ -26,14 +26,17 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>To do List</h1>
+    <div className="list-container">
+      <h1 className="list-title">To do List</h1>
       <input
+        className="list-input"
         type="text"
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
       />
-      <button onClick={handleAddTask}>Add task</button>
+      <button className="list-button" onClick={handleAddTask}>
+        Add task
+      </button>
       <TodoList
         tasks={tasks}
         onDeleteTask={handleDeleteTask}

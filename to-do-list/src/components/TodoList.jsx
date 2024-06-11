@@ -1,8 +1,9 @@
 import TodoItem from "./TodoItem";
+import "./components.css";
 
 function TodoList({ tasks, onDeleteTask, onToggleTask }) {
   return (
-    <ul>
+    <ul className="list-ul">
       {tasks.map((task, index) => (
         <TodoItem
           key={index}

@@ -1,13 +1,15 @@
 function TodoItem({ task, onDelete, onToggle }) {
   return (
-    <li>
+    <li className="list-li">
       <span
         style={{ textDecoration: task.completed ? "line-through" : "none" }}
         onClick={onToggle}
       >
         {task.text}
       </span>
-      <button onClick={onDelete}>Delete</button>
+      <button className="list-button-li" onClick={onDelete}>
+        Delete
+      </button>
     </li>
   );
 }

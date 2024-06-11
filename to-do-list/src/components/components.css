@@ -1,0 +1,27 @@
+.list-ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-button-li{
+    border: none;  
+  background-color: #d9eee1;
+  border: 2px solid #0c0c0c;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2px 8px;
+  margin: 16px;
+  cursor: pointer;
+
+}
+
+.list-button-li:hover {
+    color: #04aa6d;
+}
