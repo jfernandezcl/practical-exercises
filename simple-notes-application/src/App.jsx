@@ -24,6 +24,21 @@ function App() {
   return (
     <>
       <h1>Simple notas Application</h1>
+      <input
+        type="text"
+        value={nuevaNota}
+        onChange={(e) => setNuevaNota(e.target.value)}
+        placeholder="Escribir nueva nota"
+      />
+      <button onClick={agreagarNota}>Agregar nota</button>
+      <ul>
+        {notas.map((nota, index) => (
+          <li key={index}>
+            {nota}
+            <button onClick={() => eliminarNota(index)}>Eliminar</button>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
