@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import NotaLista from "./components/NotaLista.jsx";
 
 function App() {
   // Estado para almacenar las notas
@@ -17,29 +18,23 @@ function App() {
 
   // Función para eliminar una nota
   const eliminarNota = (indice) => {
-    const nuevasNotas = notas.filter((notas, i) => i !== indice);
+    const nuevasNotas = notas.filter((nota, i) => i !== indice);
     setNotas(nuevasNotas);
   };
 
   return (
-    <>
+    <div>
       <h1>Simple notas Application</h1>
-      <input
-        type="text"
+      <textarea
         value={nuevaNota}
         onChange={(e) => setNuevaNota(e.target.value)}
         placeholder="Escribir nueva nota"
+        rows={16}
+        cols={50}
       />
       <button onClick={agreagarNota}>Agregar nota</button>
-      <ul>
-        {notas.map((nota, index) => (
-          <li key={index}>
-            {nota}
-            <button onClick={() => eliminarNota(index)}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
-    </>
+      <NotaLista notas={notas} onDeleteNota={eliminarNota} />
+    </div>
   );
 }
 
