@@ -2,9 +2,11 @@ import "./Nota.css";
 
 function Nota({ nota, onDelete }) {
   return (
-    <div>
+    <div className="notas">
       <p>{nota}</p>
-      <button onClick={onDelete}>Eliminar</button>
+      <button className="notas-button" onClick={onDelete}>
+        Eliminar
+      </button>
     </div>
   );
 }
