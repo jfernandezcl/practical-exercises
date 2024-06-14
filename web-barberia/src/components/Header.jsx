@@ -1,9 +1,10 @@
+// @ts-nocheck
 import React from "react";
 
 const Header = () => {
   return (
     <header>
-      <h1>Página Personal - Barbería</h1>
+      <div></div>
     </header>
   );
 };
