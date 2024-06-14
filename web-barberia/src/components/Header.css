@@ -1,0 +1,28 @@
+.h-container-list {
+    background-color: rgba(86, 83, 80, 0.7);   
+}
+
+.h-container-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: right;
+
+}
+
+.h-container-list ul li {
+    margin: 0 24px;
+
+}
+
+.h-container-list ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.h-container-list ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
