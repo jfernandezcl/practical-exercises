@@ -12,7 +12,18 @@ const Article = () => {
         <h1>BIENVENIDO A LA BARBERÍA</h1>
       </div>
       <div className="card-horario">
-        <p>HORARIO: Lunes a Viernes: 10:30 - 13:30 / 16:00 - 19:30</p>
+        <h2>HORARIO</h2>
+        <h3>Lunes a Viernes:</h3>
+        <h4>10:30 - 13:30 / 16:00 - 19:30</h4>
+        <h3>Sábado:</h3>
+        <h4>10:30 - 13:30</h4>
+      </div>
+      <div className="card-contacto">
+        <h2>CONTACTO</h2>
+        <h4>Teléfono: 555.123.456</h4>
+        <h2>Dirección:</h2>
+        <h4>Av. Principal 123</h4>
+        <h4>Madrid</h4>
       </div>
     </article>
   );
@@ -21,4 +32,4 @@ const Article = () => {
 export default Article;
 
 //BIENVENIDO A LA BARBERÍA
-//10:30 - 13:30 / 16:00 - 19:30
+//HORARIO: Lunes a Viernes: 10:30 - 13:30 / 16:00 - 19:30
