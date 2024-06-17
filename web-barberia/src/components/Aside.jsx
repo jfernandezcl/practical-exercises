@@ -1,7 +1,7 @@
 import React from "react";
 
 const Aside = () => {
-  return <p>imagen</p>;
+  return <p></p>;
 };
 
 export default Aside;

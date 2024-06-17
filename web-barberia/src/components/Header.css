@@ -1,5 +1,6 @@
 .h-container-list {
-    background-color: rgba(86, 83, 80, 0.7);   
+    background-color: rgba(86, 83, 80, 0.7); 
+    
 }
 
 .h-container-list ul {
@@ -8,11 +9,12 @@
     padding: 24px;
     display: flex;
     justify-content: right;
-
+      
 }
 
 .h-container-list ul li {
-    margin: 0 24px;
+    margin: 0 36px;
+
 
 }
 

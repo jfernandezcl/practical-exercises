@@ -1,20 +1,24 @@
-import React from "react";
+import "./Article.css";
+// @ts-ignore
+import imagen from "../images/vintage.jpg";
 
 const Article = () => {
   return (
     <article className="article-data">
-      <h1>WELCOME TO THE BARBERIA</h1>;
       <div>
-        <p>TIMETABLE</p>
+        <img className="imagen-principal" src={imagen}></img>
       </div>
-      <div>
-        <p>OUR LOCATION</p>
+      <div className="article-title">
+        <h1>BIENVENIDO A LA BARBERÍA</h1>
       </div>
-      <div>
-        <p>TELEPHONE</p>
+      <div className="card-horario">
+        <p>HORARIO: Lunes a Viernes: 10:30 - 13:30 / 16:00 - 19:30</p>
       </div>
     </article>
   );
 };
 
 export default Article;
+
+//BIENVENIDO A LA BARBERÍA
+//10:30 - 13:30 / 16:00 - 19:30
