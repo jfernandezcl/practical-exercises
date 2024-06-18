@@ -15,7 +15,7 @@
 
 .article-title {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -28,7 +28,7 @@
 .card-horario,
 .card-contacto {
   position: absolute;
-  top: 65%; 
+  top: 60%; 
   width: 20%; 
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -51,10 +51,10 @@
 
 .card-formulario {
   position: absolute;
-  top: 100%; 
+  top: 107%; 
   width: 20%; 
   background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.5;
   padding: 28px;
   border-radius: 24px;
@@ -64,16 +64,49 @@
   transform: translate(-50%, -50%);
 }
 
+.card-formulario ul {
+  margin: 0;
+  padding: 0;
+}
+
 .card-formulario ul li {
   list-style: none;
   text-decoration: none;
-  display: flex;
-  padding: 8px;
+  padding: 12px;
+}
+
+
+
+label {
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 .form-input {
-
+  padding: .5rem;
+  width: 300px;
+  height: 20px;
+  
 }
 
+.form-mensaje {
+  width: 300px;
+  height: 150px;
+}
 
+.form-button {
+  background: none;
+  background-color: white;
+  box-shadow: none;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 
+.form-button:hover {
+  background-color: rgba(86, 83, 80, 0.2); 
+}

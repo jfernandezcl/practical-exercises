@@ -45,18 +45,22 @@ const Article = () => {
                 type="email"
                 id="mail"
                 name="user_mail"
+                placeholder="javi@gmail.com"
               />
             </li>
             <li>
-              <label form="msg">Mensaje: </label>
+              <label form="msg">Mensaje:</label>
               <textarea
-                className="form-input"
+                className="form-mensaje"
                 name="user_message"
                 id="msg"
+                placeholder="Escribir mensaje..."
               ></textarea>
             </li>
             <li>
-              <button type="submit">Enviar</button>
+              <button className="form-button" type="submit">
+                Enviar
+              </button>
             </li>
           </ul>
         </form>
