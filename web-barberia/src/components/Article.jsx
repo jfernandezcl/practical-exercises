@@ -25,11 +25,44 @@ const Article = () => {
         <h4>Av. Principal 123</h4>
         <h4>Madrid</h4>
       </div>
+      <div className="card-formulario">
+        <form>
+          <ul>
+            <li>
+              <label form="name">Nombre: </label>
+              <input
+                className="form-input"
+                type="text"
+                id="name"
+                name="use_name"
+                placeholder="Javi Fernández"
+              />
+            </li>
+            <li>
+              <label form="mail">Email: </label>
+              <input
+                className="form-input"
+                type="email"
+                id="mail"
+                name="user_mail"
+              />
+            </li>
+            <li>
+              <label form="msg">Mensaje: </label>
+              <textarea
+                className="form-input"
+                name="user_message"
+                id="msg"
+              ></textarea>
+            </li>
+            <li>
+              <button type="submit">Enviar</button>
+            </li>
+          </ul>
+        </form>
+      </div>
     </article>
   );
 };
 
 export default Article;
-
-//BIENVENIDO A LA BARBERÍA
-//HORARIO: Lunes a Viernes: 10:30 - 13:30 / 16:00 - 19:30
