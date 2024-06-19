@@ -1,6 +1,8 @@
+// @ts-nocheck
 import "./Article.css";
 // @ts-ignore
 import imagen from "../images/vintage.jpg";
+import Formulario from "./Formulario";
 
 const Article = () => {
   return (
@@ -26,44 +28,7 @@ const Article = () => {
         <h4>Madrid</h4>
       </div>
       <div className="card-formulario">
-        <form>
-          <ul>
-            <li>
-              <label form="name">Nombre: </label>
-              <input
-                className="form-input"
-                type="text"
-                id="name"
-                name="use_name"
-                placeholder="Javi Fernández"
-              />
-            </li>
-            <li>
-              <label form="mail">Email: </label>
-              <input
-                className="form-input"
-                type="email"
-                id="mail"
-                name="user_mail"
-                placeholder="javi@gmail.com"
-              />
-            </li>
-            <li>
-              <label form="msg">Mensaje:</label>
-              <textarea
-                className="form-mensaje"
-                name="user_message"
-                id="msg"
-                placeholder="Escribir mensaje..."
-              ></textarea>
-            </li>
-            <li>
-              <button className="form-button" type="submit">
-                Enviar
-              </button>
-            </li>
-          </ul>
-        </form>
+        <Formulario />
       </div>
     </article>
   );
