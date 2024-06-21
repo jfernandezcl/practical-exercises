@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  const [searchData, setSearchData] = useState();
   const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${
     // @ts-ignore
     import.meta.env.VITE_API_KEY
   }&q=London&aqi=no`;
-  const [searchData, setSearchData] = useState();
 
   useEffect(() => {
     fetch(apiUrl)
