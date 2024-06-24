@@ -48,7 +48,7 @@ function App() {
       </form>
 
       {searchData && (
-        <div>
+        <div className="data-climate">
           <h2>Clima en {searchData.location.name}:</h2>
           <p>Temperatura: {searchData.current.temp_c}°C</p>
           <p>Condición: {searchData.current.condition.text}</p>
