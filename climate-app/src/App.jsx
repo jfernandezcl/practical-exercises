@@ -4,8 +4,10 @@ import Formulario from "./components/Formulario";
 const App = () => {
   return (
     <main>
-      <h1>Buscador de clima:</h1>
-      <Formulario />
+      <div>
+        <h1 className="titulo">Buscador de clima</h1>
+        <Formulario />
+      </div>
     </main>
   );
 };

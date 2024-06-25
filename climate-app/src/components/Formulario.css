@@ -1,0 +1,49 @@
+form {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #dbdcff;
+    
+}
+.contenido{
+   display: block;
+   width: calc(90%);
+   border-radius: 20px;
+   border: 0;
+   padding: 10px 10px;
+   font-size: 18px;
+   padding: 30px 10px 10px;
+   background: #cdd1ff;
+}
+
+.contenido-nombre{
+    display: block;
+    width: auto;
+    padding: 10px 10px;
+    background-color: rgba(255,0,0, .3);
+    border-radius: 20px;
+
+}
+
+.contenido-input{
+    display: block;
+    padding: 10px 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+                                             
+}
+
+.button-buscar {
+    display: block;
+    padding: 8px 20px;
+    margin: 20px;
+    color: black;
+    border: none;
+    background: linear-gradient(70deg, #99a6fa, rgba(255,0,0, .3));
+    border-radius: 20px;
+}
+
+.button-buscar:hover{
+    border: 2px solid black;
+}

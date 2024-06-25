@@ -11,7 +11,7 @@ const Formulario = () => {
       const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${
         // @ts-ignore
         import.meta.env.VITE_API_KEY
-      }&q={city}&aqi=no`;
+      }&q=${city}&aqi=no`;
 
       fetch(apiUrl)
         .then((response) => response.json())
@@ -29,27 +29,35 @@ const Formulario = () => {
   };
 
   return (
-    <div>
+    <main>
+      {/*Introducir ciudad y botón*/}
       <form onSubmit={handleSubmit}>
-        <label>
-          Ciudad:
-          <input
-            className="form-input"
-            type="text"
-            value={inputCity}
-            onChange={handleInputChange}
-          />
-        </label>
-        <button type="submit">Buscar</button>
-      </form>
-      {searchData && (
-        <div className="data-climate">
-          <h2>Clima en {searchData.location.name}:</h2>
-          <p>Temperatura: {searchData.current.temp_c}°C</p>
-          <p>Condición: {searchData.current.condition.text}</p>
+        <div className="contenido">
+          <label className="contenido-nombre">
+            Ciudad:
+            <input
+              className="contenido-input"
+              type="text"
+              value={inputCity}
+              onChange={handleInputChange}
+            />
+          </label>
         </div>
-      )}
-    </div>
+        <button className="button-buscar" type="submit">
+          Buscar
+        </button>
+      </form>
+      {/*Información*/}
+      <div>
+        {searchData && (
+          <div className="data-climate">
+            <h2>Clima en {searchData.location.name}:</h2>
+            <p>Temperatura: {searchData.current.temp_c}°C</p>
+            <p>Condición: {searchData.current.condition.text}</p>
+          </div>
+        )}
+      </div>
+    </main>
   );
 };
 
