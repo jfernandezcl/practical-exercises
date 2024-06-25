@@ -25,3 +25,5 @@ Requisitos:
     Organización por Etiquetas:
         Mostrar una lista de todas las etiquetas disponibles.
         Al hacer clic en una etiqueta, filtrar las notas para mostrar solo aquellas que tienen esa etiqueta.
+
+// color: #535bf2;

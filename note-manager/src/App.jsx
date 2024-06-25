@@ -1,11 +1,24 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [notas, setNotas] = useState();
+
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Note Manager</h1>
+      <main>
+        <form>
+          <label>
+            Título:
+            <input type="text" />
+          </label>
+          <label>
+            Texto:
+            <input type="text" />
+          </label>
+        </form>
+      </main>
     </>
   );
 }
