@@ -34,12 +34,13 @@ const Formulario = () => {
       <form onSubmit={handleSubmit}>
         <div className="contenido">
           <label className="contenido-nombre">
-            Ciudad:
+            Localización:
             <input
               className="contenido-input"
               type="text"
               value={inputCity}
               onChange={handleInputChange}
+              placeholder="Escribir localización..."
             />
           </label>
         </div>
@@ -51,9 +52,11 @@ const Formulario = () => {
       <div>
         {searchData && (
           <div className="data-climate">
-            <h2>Clima en {searchData.location.name}:</h2>
-            <p>Temperatura: {searchData.current.temp_c}°C</p>
+            <h2>Clima en {searchData.location.name}</h2>
+            <img src={searchData.current.condition.icon} alt="icono tiempo" />
             <p>Condición: {searchData.current.condition.text}</p>
+            <p>Temperatura: {searchData.current.temp_c}°C</p>
+            <p>Fecha y hora: {searchData.location.localtime}</p>
           </div>
         )}
       </div>
