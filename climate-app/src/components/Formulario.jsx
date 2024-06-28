@@ -29,8 +29,8 @@ const Formulario = () => {
   };
 
   return (
-    <main>
-      {/*Introducir ciudad y botón*/}
+    <>
+      {/*Introducir ciudad*/}
       <form onSubmit={handleSubmit}>
         <div className="contenido">
           <label className="contenido-nombre">
@@ -60,7 +60,7 @@ const Formulario = () => {
           </div>
         )}
       </div>
-    </main>
+    </>
   );
 };
 
