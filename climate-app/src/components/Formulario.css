@@ -53,22 +53,3 @@ form {
 .button-buscar:hover{
     border: 2px solid black;
 }
-
-.data-climate{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 600px;
-    margin-top: 40%;
-    background-color: rgb(205, 209, 255, .9);
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 40px;
-    border-radius: 40px;
-    padding-top: 12px;
-}
-
-.data-climate img{
-    width: 70px;
-    height: 70px;
-}
