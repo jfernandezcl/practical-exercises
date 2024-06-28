@@ -1,3 +1,4 @@
+import "./FollowCard.css";
 import { useState } from "react";
 
 export function FollowCard({ children, userName }) {

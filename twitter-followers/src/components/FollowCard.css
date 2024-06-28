@@ -1,0 +1,48 @@
+.followCard {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+  }
+
+  .followCard-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .followCard-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .followCard-infoUser {
+    opacity: .6;
+  }
+  
+  .followCard-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+  }
+  
+  .followCard-button {
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    border: 2px solid rgb(161, 6, 6);
+  }
+  
+  .followCard-button:hover {
+    background-color: rgb(80, 147, 247);
+    transition: .3s ease background-color;
+  }
+  
+  .is-following {
+    background-color: rgb(140, 224, 140);
+    border: 2px solid rgb(80, 147, 247);
+  }
