@@ -1,5 +1,4 @@
 import "./App.css";
-import "./components/Title/Title.css";
 
 import { ListOfUsers } from "./components/ListOFUsers/ListOfUsers";
 import { Title } from "./components/Title/Title";
@@ -12,7 +11,7 @@ export function App() {
 
   return (
     <main>
-      <div className="title-card">
+      <div className="card-title">
         <Title title={"API user data"} />
       </div>
       <div className="botton-cancel">

@@ -3,7 +3,9 @@ ul {
 }
 
 .users-card {
-    background-color: #428e64;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    background-color: #01ac99;
 }
 
 .container-arrow {
