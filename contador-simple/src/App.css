@@ -3,13 +3,14 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 16px;
+  padding: 12px;
 }
 
 .title {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 4px;
-  padding: 2px 6px;
   background-color: #09f;
   color: white;
   width: 300px;
@@ -27,4 +28,9 @@
   padding: 8px;
   margin: 16px;
   border-radius: 4px;
+}
+
+.button:hover{
+  cursor: pointer;
+  border: 2px solid black;
 }
