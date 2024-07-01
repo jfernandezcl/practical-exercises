@@ -31,7 +31,7 @@ function App() {
             Decrementar
           </button>
           <button className="button" onClick={handleClickReset}>
-            Reset
+            Resetear
           </button>
         </div>
       </main>
