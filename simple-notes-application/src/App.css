@@ -34,9 +34,7 @@ textarea {
     border: 2px solid black;
 }
 
-.icon-notas {
+.notas-icon {
    display: flex;
    flex-direction: column;
-   justify-content: end;
-    
 }
