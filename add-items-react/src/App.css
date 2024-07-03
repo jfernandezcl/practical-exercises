@@ -5,3 +5,8 @@
   text-align: center;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 14px;
+}
