@@ -60,7 +60,8 @@ input{
   cursor: default;
   border: 1px solid #555;
   display: block;
-  margin-bottom: 16px;
+  width: 50%;
+  margin-bottom: 32px;
 }
 
 @media (prefers-color-scheme: light) {

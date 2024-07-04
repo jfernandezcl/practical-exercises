@@ -1,7 +1,21 @@
-
+import { useState } from 'react'
 import './App.css'
 
+const INITIAL_ITEMS = [
+{
+  id: crypto.randomUUID(),
+  timestamp: new Date(),
+  text: 'Videojuegos'
+},
+{
+  id: crypto.randomUUID(),
+  timestamp: new Date(),
+  text: 'Libros'
+}
+]
+
 function App() {
+   const [items, setItems] = useState(INITIAL_ITEMS);
 
   return (
     <main>
@@ -23,16 +37,23 @@ function App() {
       </aside>
 
       <section>
-      <ul>
         <h2>Lista de elementos</h2>
-        <li>Videojuegos</li>
-        <li>Libros</li>
-        <li>Series</li>
-        <li>Películas</li>
-      </ul>
+        <ul>
+          {
+            items.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.text}
+                </li>
+              )
+            }) 
+          }
+        </ul>
       </section>
     </main>
   )
 }
 
 export default App
+
+
