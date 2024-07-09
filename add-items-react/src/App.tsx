@@ -57,9 +57,9 @@ function App() {
 
   return (
     <main>
-      <aside>
-      <h1>Prueba técnica</h1>
-      <h2>Añadir y eliminar elementos de un lista</h2>
+      <section>
+      <h1 className='card-title'>Prueba técnica</h1>
+      <h2>Añadir elementos</h2>
 
       <form onSubmit={handleSubmit}>
         <label>Elemento a introducir:
@@ -72,7 +72,7 @@ function App() {
         </label>
         <button>Añadir elementos a la lista</button>
       </form>
-      </aside>
+      </section>
 
       <section>
         <h2>Lista de elementos</h2>
@@ -82,7 +82,7 @@ function App() {
               return (
                 <li key={item.id}>
                   {item.text}
-                  <button onClick={createHandleRemoveItem(item.id)}>
+                  <button className='button-delete' onClick={createHandleRemoveItem(item.id)}>
                     Eliminar 
                   </button>
                 </li>
