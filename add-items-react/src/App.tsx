@@ -74,7 +74,7 @@ function App() {
       </form>
       </section>
 
-      <section>
+      <section className='card-list'>
         <h2>Lista de elementos</h2>
         <ul>
           {
