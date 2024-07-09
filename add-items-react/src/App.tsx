@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 interface Item {
-  id: `${string}-${string}-${string}-${string}-${string}-`
+  id: `${string}-${string}-${string}-${string}-${string}`
   timestamp: number
   text: string
 
@@ -27,9 +27,24 @@ function App() {
    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const { elements } = event.currentTarget 
+    const { elements } = event.currentTarget
+
     const input = elements.namedItem('item')
- 
+    const isInput = input instanceof HTMLInputElement
+    if (!isInput || input == null) return 
+    
+    const newItem: Item = {
+      id: crypto.randomUUID(),
+      text: input.value,
+      timestamp: Date.now()
+    }
+
+    setItems((prevItems) => {
+      return [...prevItems, newItem]
+    })
+
+    input.value = ''
+
    } 
 
   return (
@@ -38,7 +53,7 @@ function App() {
       <h1>Prueba técnica</h1>
       <h2>Añadir y eliminar elementos de un lista</h2>
 
-      <form onClick={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>Elemento a introducir:
         <input 
           name='item'
