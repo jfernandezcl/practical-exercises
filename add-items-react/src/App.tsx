@@ -70,7 +70,7 @@ function App() {
           placeholder='Introduce el texto'
         />
         </label>
-        <button>Añadir elementos a la lista</button>
+        <button className='button-form'>Añadir a la lista</button>
       </form>
       </section>
 
