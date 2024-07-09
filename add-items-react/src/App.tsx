@@ -59,7 +59,7 @@ function App() {
           name='item'
           required
           type='text'
-          placeholder='Videojuegos'
+          placeholder='Introduce el texto'
         />
         </label>
         <button>Añadir elementos a la lista</button>
