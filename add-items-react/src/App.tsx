@@ -58,24 +58,24 @@ function App() {
   return (
     <main>
       <section>
-      <h1 className='card-title'>Prueba técnica</h1>
-      <h2>Añadir elementos</h2>
+      <h1 className='card-title'>Technical test</h1>
+      <h2>Add elements</h2>
 
       <form onSubmit={handleSubmit}>
-        <label>Elemento a introducir:
+        <label>Introduces elements:
         <input 
           name='item'
           required
           type='text'
-          placeholder='Introduce el texto'
+          placeholder='Enter the text'
         />
         </label>
-        <button className='button-form'>Añadir a la lista</button>
+        <button className='button-form'>Add to the list</button>
       </form>
       </section>
 
       <section className='card-list'>
-        <h2>Lista de elementos</h2>
+        <h2>List of items</h2>
         <ul>
           {
             items.map(item => {
@@ -83,7 +83,7 @@ function App() {
                 <li key={item.id}>
                   {item.text}
                   <button className='button-delete' onClick={createHandleRemoveItem(item.id)}>
-                    Eliminar 
+                    Delete 
                   </button>
                 </li>
               )
