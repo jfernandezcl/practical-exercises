@@ -45,3 +45,8 @@ input{
     cursor: pointer;
     color: white;
 }
+
+.text-list{
+    color: #eb4949;
+    text-decoration: underline;
+}

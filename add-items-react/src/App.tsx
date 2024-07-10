@@ -79,7 +79,7 @@ function App() {
         <ul>
           {
             items.length === 0 ? (
-              <p>
+              <p className='text-list'>
                 <strong>There are no items in the list</strong>
               </p>
             ) : (
