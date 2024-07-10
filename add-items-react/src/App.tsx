@@ -78,6 +78,11 @@ function App() {
         <h2>List of items</h2>
         <ul>
           {
+            items.length === 0 ? (
+              <p>
+                <strong>There are no items in the list</strong>
+              </p>
+            ) : (
             items.map(item => {
               return (
                 <li key={item.id}>
@@ -88,6 +93,7 @@ function App() {
                 </li>
               )
             }) 
+            )
           }
         </ul>
       </section>
