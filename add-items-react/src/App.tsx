@@ -76,13 +76,14 @@ function App() {
 
       <section className='card-list'>
         <h2>List of items</h2>
-        <ul>
-          {
+        {
             items.length === 0 ? (
               <p className='text-list'>
                 <strong>There are no items in the list</strong>
               </p>
             ) : (
+              <ul>
+          {
             items.map(item => {
               return (
                 <li key={item.id}>
@@ -92,10 +93,10 @@ function App() {
                   </button>
                 </li>
               )
-            }) 
+            })} </ul>
             )
           }
-        </ul>
+        
       </section>
     </main>
   )
