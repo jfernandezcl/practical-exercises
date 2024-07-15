@@ -21,15 +21,25 @@ describe("<App />", () => {
     const form = screen.getByRole("form");
     expect(form).toBeDefined();
 
-    form.querySelector("button");
+    const button = form.querySelector("button");
     expect(button).toBeDefined();
 
-    await user.type(input, "midudev");
+    const randomText = crypto.randomUUID()
+    await user.type(input, randomText)
     await user.click(button!)
 
     const list = screen.getByRole('list')
     expect(list).toBeDefined();
-
     expect(list.childNodes.length).toBe(1)
+
+    const item = screen.getByText(randomText)
+    const removeButton = item.querySelector('button')
+    expect(removeButton).toBeDefined()
+
+    await user.click(removeButton!)
+
+    const noResult = screen.getByText('There are no items in the list')
+    expect(noResult).toBeDefined()
+
   });
 });
