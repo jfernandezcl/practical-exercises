@@ -6,8 +6,7 @@ import App from "../src/App";
 describe("<App />", () => {
   test("should work", () => {
     render(<App />);
-    screen.debug();
 
-    expect(screen.getByText("Prueba técnica de React")).toBeDefined();
+    expect(screen.getByText("Videojuegos")).toBeDefined();
   });
 });
