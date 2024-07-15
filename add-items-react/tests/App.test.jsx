@@ -15,7 +15,10 @@ describe("<App />", () => {
 
     render(<App />);
 
-    const input = screen.getAllByRole("textbox");
+    const input = screen.getByRole("textbox");
     expect(input).toBeDefined();
+
+    const form = screen.getByRole("form");
+    expect(form).toBeDefined();
   });
 });

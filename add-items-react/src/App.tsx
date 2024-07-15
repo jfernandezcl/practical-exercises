@@ -61,7 +61,7 @@ function App() {
       <h1 className='card-title'>Technical test</h1>
       <h2>Add elements</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} aria-label='Adding items to the list'>
         <label>Introduces elements:
         <input 
           name='item'
