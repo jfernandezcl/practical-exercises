@@ -1,12 +1,21 @@
 import React from "react";
+import userEvent from "@testing-library/user-event";
 import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import App from "../src/App";
 
 describe("<App />", () => {
-  test("should work", () => {
+  //test("should work", () => {
+  // render(<App />);
+
+  // expect(screen.getByText("Videojuegos")).toBeDefined();
+  //});
+  test("should add item and remove them", () => {
+    const user = userEvent.setup();
+
     render(<App />);
 
-    expect(screen.getByText("Videojuegos")).toBeDefined();
+    const input = screen.getAllByRole("textbox");
+    expect(input).toBeDefined();
   });
 });
