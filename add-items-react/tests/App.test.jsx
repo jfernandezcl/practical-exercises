@@ -10,7 +10,7 @@ describe("<App />", () => {
 
   // expect(screen.getByText("Videojuegos")).toBeDefined();
   //});
-  test("should add item and remove them", () => {
+  test("should add item and remove them", async () => {
     const user = userEvent.setup();
 
     render(<App />);
@@ -20,5 +20,16 @@ describe("<App />", () => {
 
     const form = screen.getByRole("form");
     expect(form).toBeDefined();
+
+    form.querySelector("button");
+    expect(button).toBeDefined();
+
+    await user.type(input, "midudev");
+    await user.click(button!)
+
+    const list = screen.getByRole('list')
+    expect(list).toBeDefined();
+
+    expect(list.childNodes.length).toBe(1)
   });
 });
