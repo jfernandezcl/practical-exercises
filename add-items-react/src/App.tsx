@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import { Item } from './components/Item'
 
-
-type ItemId =`${string}-${string}-${string}-${string}-${string}`
+export type ItemId =`${string}-${string}-${string}-${string}-${string}`
 interface Item {
   id: ItemId
   timestamp: number
@@ -65,27 +65,27 @@ function App() {
 
       <section className='card-list'>
         <h2>List of items</h2>
-        {
+          {
             items.length === 0 ? (
               <p className='text-list'>
                 <strong>There are no items in the list</strong>
               </p>
             ) : (
               <ul>
-          {
-            items.map(item => {
-              return (
-                <li key={item.id}>
-                  {item.text}
-                  <button className='button-delete' onClick={createHandleRemoveItem(item.id)}>
-                    Delete 
-                  </button>
-                </li>
-              )
-            })} </ul>
+                {
+                items.map((item) => {
+                  return (
+                
+                  <Item 
+                  {...item}
+                  handleClick={createHandleRemoveItem(item.id)} 
+                  key={item.id}/>
+                  )
+                })
+                }
+              </ul>
             )
           }
-        
       </section>
     </main>
   )
