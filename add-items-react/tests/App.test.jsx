@@ -5,11 +5,6 @@ import { render, screen } from "@testing-library/react";
 import App from "../src/App";
 
 describe("<App />", () => {
-  //test("should work", () => {
-  // render(<App />);
-
-  // expect(screen.getByText("Videojuegos")).toBeDefined();
-  //});
   test("should add item and remove them", async () => {
     const user = userEvent.setup();
 
@@ -21,25 +16,26 @@ describe("<App />", () => {
     const form = screen.getByRole("form");
     expect(form).toBeDefined();
 
-    const button = form.querySelector("button");
+    const button = screen.getByRole("button", { name: /agregar/i });
     expect(button).toBeDefined();
 
-    const randomText = crypto.randomUUID()
-    await user.type(input, randomText)
-    await user.click(button!)
+    const randomText = crypto.randomUUID();
+    await user.type(input, randomText);
+    await user.click(button);
 
-    const list = screen.getByRole('list')
+    const list = screen.getByRole("list");
     expect(list).toBeDefined();
-    expect(list.childNodes.length).toBe(1)
+    expect(list.childNodes.length).toBe(1);
 
-    const item = screen.getByText(randomText)
-    const removeButton = item.querySelector('button')
-    expect(removeButton).toBeDefined()
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const item = screen.getByText(randomText);
 
-    await user.click(removeButton!)
+    const removeButton = screen.getByRole("button", { name: /eliminar/i });
+    expect(removeButton).toBeDefined();
 
-    const noResult = screen.getByText('There are no items in the list')
-    expect(noResult).toBeDefined()
+    await user.click(removeButton);
 
+    const noResult = screen.getByText("There are no items in the list");
+    expect(noResult).toBeDefined();
   });
 });
