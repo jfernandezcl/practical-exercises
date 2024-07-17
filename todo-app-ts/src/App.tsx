@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 const mockTodos = [
@@ -19,10 +20,10 @@ const mockTodos = [
 ]
 
 
-const App: React.FC = () => {
-
+const App = (): JSX.Element => {
+  const [todos] = useState(mockTodos)
   return (
-      <h1>Todo App ts</h1>
+      <Todos todos={todos} />
   )
 }
 
