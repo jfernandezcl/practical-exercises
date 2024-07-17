@@ -1,4 +1,6 @@
 import { ListOfTodos } from "./types"
+import { Todo } from "./todo"
+
 
 interface Props {
     todos: ListOfTodos
@@ -6,12 +8,12 @@ interface Props {
 
 
 
-export const Todos: React.FC =({ todos }) => {
+export const Todos: React.FC = ({ todos }) => {
     return (
         <ul>
             {todos.map(todo => (
                 <li key={todo.id} className={`${todo.completed ? 'completed' : ''}`}>
-                    <Todos 
+                    <Todo
                         key={todo.id}
                         id={todo.id}
                         title={todo.title}
