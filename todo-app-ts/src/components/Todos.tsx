@@ -4,7 +4,7 @@ import { Todo } from "./todo"
 
 interface Props {
     todos: ListOfTodos
-    onRemoveTodo: (id: string) => void
+    onRemoveTodo: ({ id }: TodoId) => void
 }
 
 
