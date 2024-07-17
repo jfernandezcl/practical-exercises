@@ -4,11 +4,12 @@ import { Todo } from "./todo"
 
 interface Props {
     todos: ListOfTodos
+    onRemoveTodo: (id: string) => void
 }
 
 
 
-export const Todos: React.FC = ({ todos }) => {
+export const Todos: React.FC = ({ todos, onRemoveTodo }) => {
     return (
         <ul>
             {todos.map(todo => (
@@ -18,6 +19,7 @@ export const Todos: React.FC = ({ todos }) => {
                         id={todo.id}
                         title={todo.title}
                         completed={todo.completed}
+                        onRemoveTodo={onRemoveTodo}
                     />
 
                 </li>

@@ -5,26 +5,37 @@ import './App.css'
 const mockTodos = [
   {
     id: '1',
-    title: 'todo 1' ,
-    completed: false,
+    title: 'Ver el Twitch de midu' ,
+    completed: true,
   },
   {
     id: '2',
-    title: 'todo 2' ,
+    title: 'Aprender React con TypeScript' ,
     completed: false,
   },
   {
     id: '3',
-    title: 'todo 3' ,
+    title: 'Sacar ticket de la miduFest' ,
     completed: false,
   }
 ]
 
 
 const App = (): JSX.Element => {
-  const [todos] = useState(mockTodos)
+  const [todos, setTodos] = useState(mockTodos)
+
+  const handleRemove = (id: string): void => {
+  const newTodos = todos.filter(todo => todo.id === id)
+  setTodos(newTodos)
+  }
+
+
   return (
-      <Todos todos={todos} />
+      <div className='todoapp'>
+        <Todos 
+        onRemoveTodo={handleRemove}
+        todos={todos} />
+      </div>
   )
 }
 
