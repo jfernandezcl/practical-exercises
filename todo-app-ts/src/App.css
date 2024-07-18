@@ -32,3 +32,8 @@ li{
   text-decoration: none;
   margin-left: 12px;
 }
+
+.button-delete:hover {
+  color: rgb(16, 157, 238);
+  cursor: pointer;
+}
