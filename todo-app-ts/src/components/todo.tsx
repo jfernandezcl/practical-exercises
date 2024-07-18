@@ -14,7 +14,8 @@ export const Todo: React.FC<Props> = ({id, title, completed, onRemoveTodo}) => {
                 onChange={() => {}}
             />
             <label>{title}</label>
-            <button 
+            <button
+            className='button-delete' 
             onClick={() => {
                 onRemoveTodo({ id })
             }}>Delete</button>
