@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
 import { Todos } from './components/Todos'
 import './App.css'
-import { type TodoTitle } from './components/types'
+import { TodoId, ListOfTodos } from './components/types';
 
-const mockTodos = [
+const mockTodos: ListOfTodos = [
   {
     id: '1',
     title: 'Ver el Twitch de midu' ,
@@ -23,10 +23,10 @@ const mockTodos = [
 
 
 const App = (): JSX.Element => {
-  const [todos, setTodos] = useState(mockTodos)
+  const [todos, setTodos] = useState<ListOfTodos>(mockTodos);
 
   const handleRemove = ({ id }: TodoId): void => {
-  const newTodos = todos.filter(todo => todo.id === id)
+  const newTodos = todos.filter(todo => todo.id !== id)
   setTodos(newTodos)
   }
 

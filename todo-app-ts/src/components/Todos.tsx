@@ -1,6 +1,6 @@
-import { ListOfTodos } from "./types"
-import { Todo } from "./todo"
-
+import React from 'react';
+import { TodoId, ListOfTodos } from './types';
+import { Todo } from './todo';
 
 interface Props {
     todos: ListOfTodos
@@ -9,7 +9,7 @@ interface Props {
 
 
 
-export const Todos: React.FC = ({ todos, onRemoveTodo }) => {
+export const Todos: React.FC<Props> = ({ todos, onRemoveTodo }) => {
     return (
         <ul>
             {todos.map(todo => (
