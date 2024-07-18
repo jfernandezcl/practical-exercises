@@ -37,3 +37,7 @@ li{
   color: rgb(16, 157, 238);
   cursor: pointer;
 }
+
+.checkbox{
+  cursor: pointer;
+}

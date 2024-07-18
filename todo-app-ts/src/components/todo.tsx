@@ -9,6 +9,7 @@ export const Todo: React.FC<Props> = ({id, title, completed, onRemoveTodo}) => {
     return(
         <div>
             <input 
+                className='checkbox'
                 checked={completed}
                 type="checkbox"
                 onChange={() => {}}
