@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Todos } from './components/Todos'
 import './App.css'
-import { TodoId, ListOfTodos } from './components/types';
+import { TodoId, ListOfTodos, type Todo as Todo } from './components/types';
+
 
 const mockTodos: ListOfTodos = [
   {
@@ -30,6 +31,8 @@ const App = (): JSX.Element => {
   setTodos(newTodos)
   }
 
+  const handleCompleted = (
+    { id, completed } : Pick<TodoType, 'id' | 'completed'>): void => {}
 
   return (
       <div className='todoapp'>
