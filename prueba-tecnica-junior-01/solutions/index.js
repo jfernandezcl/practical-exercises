@@ -31,9 +31,10 @@ export function obtenerDatosPromise() {
   });
 }
 
-obtenerDatosPromise().then((info) => {
-  console.log(info);
-});
-.catch(error => {
-  console.error(error)
-})
+obtenerDatosPromise()
+  .then((info) => {
+    console.log(info);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
