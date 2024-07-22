@@ -30,7 +30,6 @@ export function obtenerDatosPromise() {
     }, 2000);
   });
 }
-
 obtenerDatosPromise()
   .then((info) => {
     console.log(info);
@@ -38,3 +37,25 @@ obtenerDatosPromise()
   .catch((error) => {
     console.error(error);
   });
+
+// EJERCICIO 3
+export function procesarArchivo(callback) {
+  fs.readFile("input.txt", "utf8", (error, contenido) => {
+    if (error) {
+      console.error("Error leyendo archivo:", error.message);
+      callback(error);
+    }
+
+    const textoProcesado = contenido.toUpperCase();
+
+    fs.writeFile("output.txt", textoProcesado, (error) => {
+      if (error) {
+        console.error("Error guardando archivo:", error.message);
+        callback(error);
+      }
+
+      console.log("Archivo procesado y guardado con éxito");
+      callback(null);
+    });
+  });
+}
