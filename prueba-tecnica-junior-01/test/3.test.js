@@ -1,4 +1,4 @@
-import { procesarArchivo } from "../solutions";
+import { procesarArchivo } from "../solutions/index.js";
 
 import { describe, it, beforeEach, afterEach } from "node:test";
 import { equal, ifError } from "node:assert/strict";
