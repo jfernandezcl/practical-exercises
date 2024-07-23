@@ -40,27 +40,26 @@ obtenerDatosPromise()
   });
 
 // EJERCICIO 3
-export function procesarArchivo(callback) {
-  const handleWrite = (error) => {
-    if (error) {
-      console.error("Error leyendo archivo:", error.message);
-      callback(error);
-    }
-    console.log("Archivo procesado y guardado con éxito");
-    callback(null);
-  };
+export async function procesarArchivoPromise() {
+  await fs.promises.readFile("input.txt", "utf8");
+  const textoProcesado = contenido.toUpperCase();
+  await fs.promises.writeFile("output.txt", textoProcesado);
 
-  const handleReadFile = (error, contenido) => {
-    if (error) {
-      console.error("Error leyendo archivo:", error.message);
-      callback(error);
-    }
+  //const handleWrite = (error) => {
+  //  if (error) {
+  //    console.error("Error leyendo archivo:", error.message);
+  //    callback(error);
+  //  }
+  //  console.log("Archivo procesado y guardado con éxito");
+  //  callback(null);
+  //};
 
-    const textoProcesado = contenido.toUpperCase();
-
-    fs.writeFile("output.txt", textoProcesado, handleWrite);
-  };
-  fs.readFile("input.txt", "utf8", handleReadFile);
+  //const handleReadFile = (error, contenido) => {
+  //  if (error) {
+  //    console.error("Error leyendo archivo:", error.message);
+  //    callback(error);
+  //  }
+  // };
 }
 
 procesarArchivo(() => {
