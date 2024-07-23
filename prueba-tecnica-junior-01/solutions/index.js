@@ -62,3 +62,7 @@ export function procesarArchivo(callback) {
   };
   fs.readFile("input.txt", "utf8", handleReadFile);
 }
+
+procesarArchivo(() => {
+  console.log("Esto ya funciona!");
+});
