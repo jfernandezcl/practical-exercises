@@ -1,3 +1,5 @@
+import { obtenerDatosPromise } from "../solutions";
+
 import { describe, it, beforeEach, afterEach } from "node:test";
 import { equal, ifError } from "node:assert/strict";
 import { unlinkSync, writeFileSync } from "node:fs";
