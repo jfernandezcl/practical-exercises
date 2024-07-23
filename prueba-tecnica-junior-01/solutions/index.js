@@ -50,7 +50,7 @@ export function procesarArchivo(callback) {
     callback(null);
   };
 
-  fs.readFile("input.txt", "utf8", (error, contenido) => {
+  const handleReadFile = (error, contenido) => {
     if (error) {
       console.error("Error leyendo archivo:", error.message);
       callback(error);
@@ -59,5 +59,6 @@ export function procesarArchivo(callback) {
     const textoProcesado = contenido.toUpperCase();
 
     fs.writeFile("output.txt", textoProcesado, handleWrite);
-  });
+  };
+  fs.readFile("input.txt", "utf8", handleReadFile);
 }
