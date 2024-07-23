@@ -1,4 +1,5 @@
 import net from "node:net";
+import fs from "node:fs";
 
 // EJERCICIO 1
 export const ping = (ip, callback) => {
