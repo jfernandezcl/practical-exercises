@@ -54,7 +54,7 @@ export async function procesarArchivoPromise() {
   try {
     await fsp.writeFile("output.txt", textoProcesado);
   } catch (e) {
-    console.error("Error leyendo archivo:", error.message);
+    console.error("Error guardando archivo:", error.message);
     throw e;
   }
 }
