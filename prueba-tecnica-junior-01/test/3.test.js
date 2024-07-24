@@ -23,4 +23,11 @@ describe("3. procesarArchivoPromise", () => {
       });
     });
   });
+
+  it("3.1. procesarArchivoPromise", async () => {
+    writeFileSync("input.txt", "hola");
+    await procesarArchivoPromise();
+    const contenido = await readFile("output.txt", "utf8");
+    equal(contenido, "HOLA");
+  });
 });
