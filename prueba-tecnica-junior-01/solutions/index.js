@@ -1,5 +1,6 @@
 import net from "node:net";
-import fs from "node:fs";
+import fs from "node:fs/";
+import fsp from "node:fs/promises";
 
 // EJERCICIO 1
 export const ping = (ip, callback) => {
@@ -41,26 +42,37 @@ obtenerDatosPromise()
 
 // EJERCICIO 3
 export async function procesarArchivoPromise() {
-  await fs.promises.readFile("input.txt", "utf8");
+  try {
+    await fsp.readFile("input.txt", "utf8");
+  } catch (e) {
+    console.error("Error leyendo archivo:", error.message);
+    throw e;
+  }
+
   const textoProcesado = contenido.toUpperCase();
-  await fs.promises.writeFile("output.txt", textoProcesado);
 
-  //const handleWrite = (error) => {
-  //  if (error) {
-  //    console.error("Error leyendo archivo:", error.message);
-  //    callback(error);
-  //  }
-  //  console.log("Archivo procesado y guardado con éxito");
-  //  callback(null);
-  //};
-
-  //const handleReadFile = (error, contenido) => {
-  //  if (error) {
-  //    console.error("Error leyendo archivo:", error.message);
-  //    callback(error);
-  //  }
-  // };
+  try {
+    await fsp.writeFile("output.txt", textoProcesado);
+  } catch (e) {
+    console.error("Error leyendo archivo:", error.message);
+    throw e;
+  }
 }
+//const handleWrite = (error) => {
+//  if (error) {
+//    console.error("Error leyendo archivo:", error.message);
+//    callback(error);
+//  }
+//  console.log("Archivo procesado y guardado con éxito");
+//  callback(null);
+//};
+
+//const handleReadFile = (error, contenido) => {
+//  if (error) {
+//    console.error("Error leyendo archivo:", error.message);
+//    callback(error);
+//  }
+// };
 
 procesarArchivo(() => {
   console.log("Esto ya funciona!");
