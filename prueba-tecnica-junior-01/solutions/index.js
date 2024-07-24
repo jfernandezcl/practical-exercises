@@ -42,20 +42,21 @@ obtenerDatosPromise()
 
 // EJERCICIO 3
 export async function procesarArchivoPromise() {
+  let contenido = "";
   try {
-    await fsp.readFile("input.txt", "utf8");
-  } catch (e) {
+    contenido = await fsp.readFile("input.txt", "utf8");
+  } catch (error) {
     console.error("Error leyendo archivo:", error.message);
-    throw e;
+    throw error;
   }
 
   const textoProcesado = contenido.toUpperCase();
 
   try {
     await fsp.writeFile("output.txt", textoProcesado);
-  } catch (e) {
+  } catch (error) {
     console.error("Error guardando archivo:", error.message);
-    throw e;
+    throw error;
   }
 }
 //const handleWrite = (error) => {
@@ -74,6 +75,4 @@ export async function procesarArchivoPromise() {
 //  }
 // };
 
-procesarArchivo(() => {
-  console.log("Esto ya funciona!");
-});
+await procesarArchivoPromise();
