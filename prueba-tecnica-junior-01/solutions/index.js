@@ -67,9 +67,9 @@ export async function leerArchivos() {
   console.time("leeArchivos");
 
   const [archivo1, archivo2, archivo3] = await Promise.allSettled([
-    fs.readSync("archivo1.txt", "utf8"),
-    fs.readSync("archivo2.txt", "utf8"),
-    fs.readSync("archivo3.txt", "utf8"),
+    fs.readFile("archivo1.txt", "utf8"),
+    fs.readFile("archivo2.txt", "utf8"),
+    fs.readFile("archivo3.txt", "utf8"),
   ]);
 
   const message = [archivo1.value, archivo2.value, archivo3.value]
