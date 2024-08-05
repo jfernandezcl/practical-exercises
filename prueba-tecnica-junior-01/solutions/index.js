@@ -1,6 +1,7 @@
 import net from "node:net";
 import fs from "node:fs/";
 import fsp from "node:fs/promises";
+import { measureMemory } from "node:vm";
 
 // EJERCICIO 1
 export const ping = (ip, callback) => {
@@ -62,12 +63,26 @@ export async function procesarArchivoPromise() {
 await procesarArchivoPromise();
 
 // EJERCICIO 4
-export function leerArchivos() {
-  const archivo1 = fs.readSync("archivo1.txt", "utf8");
-  const archivo2 = fs.readSync("archivo2.txt", "utf8");
-  const archivo3 = fs.readSync("archivo3.txt", "utf8");
+export async function leerArchivos() {
+  console.time("leeArchivos");
 
-  return `${archivo1} ${archivo2} ${archivo3}`;
+  const [archivo1, archivo2, archivo3] = await Promise.allSettled([
+    fs.readSync("archivo1.txt", "utf8"),
+    fs.readSync("archivo2.txt", "utf8"),
+    fs.readSync("archivo3.txt", "utf8"),
+  ]);
+
+  const message = [archivo1.value, archivo2.value, archivo3.value]
+    .filter((value) => typeof value !== "undefined")
+    .join(" ");
+
+  console.log(message);
+
+  //const archivo1 = fs.readSync("archivo1.txt", "utf8");
+  //const archivo2 = fs.readSync("archivo2.txt", "utf8");
+  //const archivo3 = fs.readSync("archivo3.txt", "utf8");
+
+  return message;
 }
 
 leerArchivos();
