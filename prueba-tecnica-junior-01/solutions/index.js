@@ -84,5 +84,12 @@ export async function leerArchivos() {
 
   return message;
 }
-
 leerArchivos();
+
+// EJERCICIO 5
+
+export async function delay(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
