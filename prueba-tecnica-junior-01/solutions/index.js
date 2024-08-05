@@ -59,20 +59,15 @@ export async function procesarArchivoPromise() {
     throw error;
   }
 }
-//const handleWrite = (error) => {
-//  if (error) {
-//    console.error("Error leyendo archivo:", error.message);
-//    callback(error);
-//  }
-//  console.log("Archivo procesado y guardado con éxito");
-//  callback(null);
-//};
-
-//const handleReadFile = (error, contenido) => {
-//  if (error) {
-//    console.error("Error leyendo archivo:", error.message);
-//    callback(error);
-//  }
-// };
-
 await procesarArchivoPromise();
+
+// EJERCICIO 4
+export function leerArchivos() {
+  const archivo1 = fs.readSync("archivo1.txt", "utf8");
+  const archivo2 = fs.readSync("archivo2.txt", "utf8");
+  const archivo3 = fs.readSync("archivo3.txt", "utf8");
+
+  return `${archivo1} ${archivo2} ${archivo3}`;
+}
+
+leerArchivos();
