@@ -15,17 +15,26 @@ app.get("/items", (req, res) => {
 });
 
 // Para recuperar uno solo
-app.get("/items", (req, res) => {
+app.get("/items/:id", (req, res) => {
   const { id } = req.params;
   const itemFound = items.find((item) => item.id === id);
   return res.json(itemFound);
 });
 
 // Para crear uno
-app.get("/items", (req, res) => {
+app.post("/items", (req, res) => {
   const { content } = req.body;
   const newId = items.length + 1;
   const newItem = { id: newId, content };
   items.push(newItem);
   return res.json(newItem);
+});
+
+// Para actualizar
+app.put("/items/:id", (req, res) => {
+  const { id } = req.params;
+  const { content } = req.body;
+  const itemFound = items.find((item) => item.id === id);
+  itemFound.content = content;
+  return res.json(itemFound);
 });
