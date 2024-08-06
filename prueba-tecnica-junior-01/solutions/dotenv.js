@@ -1,9 +1,9 @@
 import { readFile } from "node:fs";
-import fs from "node:fs/promises";
+import fs from "node:fs";
 
 export function config({ path = ".env" } = {}) {
   try {
-    const env = fs.readFile(path, "utf8");
+    const env = fs.readFileSync(path, "utf8");
     const lines = env.split("\n");
 
     lines.forEach((line) => {
