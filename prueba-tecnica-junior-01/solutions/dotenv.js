@@ -9,6 +9,12 @@ export function config({ path = ".env" } = {}) {
     lines.forEach((line) => {
       const [key, ...value] = line.split("=");
       const joinedValue = value.join("=");
+
+      const hasQuotes = joinedValue.starsWith('"') && joinedValue.endsWith('"');
+
+      const valueToStore = hasQuotes ? joinedValue.slice(1, -1) : joinedValue;
+
+      process.env[key] = valueToStore;
     });
   } catch (error) {
     console.error(e);
