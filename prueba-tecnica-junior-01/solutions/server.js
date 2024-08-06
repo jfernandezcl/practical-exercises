@@ -20,3 +20,12 @@ app.get("/items", (req, res) => {
   const itemFound = items.find((item) => item.id === id);
   return res.json(itemFound);
 });
+
+// Para crear uno
+app.get("/items", (req, res) => {
+  const { content } = req.body;
+  const newId = items.length + 1;
+  const newItem = { id: newId, content };
+  items.push(newItem);
+  return res.json(newItem);
+});
