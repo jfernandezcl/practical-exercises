@@ -46,3 +46,5 @@ app.delete("/items/:id", (req, res) => {
   items.splice(itemIndex, 1);
   return res.status(200).json();
 });
+
+export const server = app.listen(process.env.PORT ?? 3000);
