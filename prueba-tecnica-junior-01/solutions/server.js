@@ -13,3 +13,10 @@ const items = [
 app.get("/items", (req, res) => {
   return res.json(items);
 });
+
+// Para recuperar uno solo
+app.get("/items", (req, res) => {
+  const { id } = req.params;
+  const itemFound = items.find((item) => item.id === id);
+  return res.json(itemFound);
+});
