@@ -38,3 +38,11 @@ app.put("/items/:id", (req, res) => {
   itemFound.content = content;
   return res.json(itemFound);
 });
+
+// Para eliminar
+app.delete("/items/:id", (req, res) => {
+  const { id } = req.params;
+  const itemIndex = item.find((item) => item.id === id);
+  items.splice(itemIndex, 1);
+  return res.status(200).json();
+});
