@@ -8,3 +8,9 @@ export function config({ path = ".env" } = {}) {
     console.error(e);
   }
 }
+
+const dotenv = {
+  config,
+};
+
+export default dotenv;
