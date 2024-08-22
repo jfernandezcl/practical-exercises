@@ -1,4 +1,6 @@
-Pokedex con React y Vite ![Poké Ball](./src/images/vector-pokemon.jpg)
+![Poké Ball](./src/images/vector-pokemon.jpg)
+
+### Pokedex con React y Vite 
 
 Este proyecto es una aplicación web desarrollada con React y Vite para explorar y visualizar Pokémon utilizando la PokeAPI. El objetivo es combinar React con estilos personalizados en CSS para crear una interfaz dinámica y atractiva.
 Funcionalidades
