@@ -11,11 +11,11 @@ function App() {
         <form>
           <label>
             Título:
-            <input type="text" />
+            <input type="text" placeholder="Título" />
           </label>
           <label>
             Texto:
-            <input type="text" />
+            <input type="text" placeholder="Escribir texo" />
           </label>
         </form>
       </main>
