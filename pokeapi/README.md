@@ -1,8 +1,7 @@
-# React + Vite
+Pokedex con React y Vite ![Poké Ball](./src/images/vector-pokemon.jpg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con React y Vite para explorar y visualizar Pokémon utilizando la PokeAPI. El objetivo es combinar React con estilos personalizados en CSS para crear una interfaz dinámica y atractiva.
+Funcionalidades
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   - Listado interactivo de Pokémon obtenidos desde la PokeAPI.
+   - Estilos CSS personalizados para un diseño visualmente agradable.
