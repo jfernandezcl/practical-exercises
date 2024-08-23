@@ -19,7 +19,7 @@ export const usePokemon = () => {
       const formattedData = data.map((pokemon) => ({
         id: pokemon.id,
         name: pokemon.name,
-        image: pokemon.sprites.front_default, // estructura-detalles del pokemon
+        image: pokemon.sprites.front_default, // estructura-detalles del pokémon
       }))
       setPokemons(formattedData);
       setFilteredPokemons(formattedData);
@@ -27,4 +27,16 @@ export const usePokemon = () => {
 
     fetchPokemons();
   }, []);
+
+  //función de búsqueda o filtro para los pokémon
+  const filterPokemons = (query) => {
+    if (!query) {
+      setFilteredPokemons(pokemons) // si no hay consultas
+    } else {
+      const filtered = pokemons.filter((pokemon) =>
+        pokemon.name.toLoweCase().incluides(query.toLoweCase()))
+      setFilteredPokemons(filtered)
+    }
+  }
+  return { pokemons: filteredPokemons, filterPokemons }
 }
