@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export const usePokemon = () => {
-  const [pokemons, setPokemons] = useState([])
-  const [filteredPokemons, setFilteredPokemons] = useState([])
+  const [pokemons, setPokemons] = useState([]);
+  const [filteredPokemons, setFilteredPokemons] = useState([]);
+
+  useEffect(() => { }, []);
 
 }
