@@ -1,10 +1,14 @@
-import './App.css'
+import './css/app.css'
+import portada from './images/img-portada.jpg'
 
 function App() {
 
   return (
     <>
-      <h1>Poké API</h1>
+      <div>
+        <h1>Poké API</h1>
+        <img src={portada} alt='portada' />
+      </div>
     </>
   )
 }
