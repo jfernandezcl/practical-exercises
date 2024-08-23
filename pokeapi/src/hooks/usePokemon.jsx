@@ -12,14 +12,14 @@ export const usePokemon = () => {
         )
       );
 
-      // mapear y pedir que datos queremos
+      // mapear y pedir la información
       const data = await Promise.all(
         responses.map((res) => res.json()) // convertir cada respuesta a json
       );
       const formattedData = data.map((pokemon) => ({
         id: pokemon.id,
         name: pokemon.name,
-        image: pokemon.sprintes.front_default,
+        image: pokemon.sprites.front_default, // estructura-detalles del pokemon
       }))
       setPokemons(formattedData);
       setFilteredPokemons(formattedData);
