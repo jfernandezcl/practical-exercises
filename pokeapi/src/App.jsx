@@ -5,9 +5,9 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='container-portada'>
         <h1>Poké API</h1>
-        <img src={portada} alt='portada' />
+        <img className='img-portada' src={portada} alt='portada' />
       </div>
     </>
   )
