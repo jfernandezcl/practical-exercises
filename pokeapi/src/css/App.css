@@ -1,3 +1,5 @@
-.img-portada {
-  height: 600px;
+.container-banner {
+  background: #e94232;
+
+  display: flex;
 }

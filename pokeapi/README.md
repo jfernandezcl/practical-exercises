@@ -24,3 +24,5 @@ Funcionalidades
 
 ### Anotaciones para cambios
     // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    //<img className='img-portada' src={portada} alt='portada' />
