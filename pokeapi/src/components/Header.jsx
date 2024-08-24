@@ -1,5 +1,6 @@
 import logo from '../images/logo.png'
 import '../css/Header.css'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -9,13 +10,13 @@ export default function Header() {
       </div>
       <ul>
         <li>
-          <a href='#home'>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href='#search'>Search</a>
+          <Link to='/search'>Search</Link>
         </li>
         <li>
-          <a href='#about'>About</a>
+          <Link to='/about'>About</Link>
         </li>
       </ul>
     </header >
