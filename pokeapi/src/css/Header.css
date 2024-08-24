@@ -1,8 +1,9 @@
 .container-banner {
   background: #e94232;
-
   display: flex;
-
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
 }
 
 .container-banner ul {
@@ -11,7 +12,7 @@
   padding: 16px;
 
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .container-banner ul li {
@@ -28,4 +29,8 @@
 .container-banner ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.container-banner img {
+  height: 160px;
 }
