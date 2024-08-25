@@ -1,17 +1,23 @@
 import './css/app.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header'
-import PokemonList from './components/PokemonList'
+import Home from './components/Home'
+import Search from './components/Search'
+import About from './components/About'
+
 
 function App() {
 
   return (
     <>
-      <div>
+      <Router>
         <Header />
-      </div>
-      <div>
-        <PokemonList />
-      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/buscar" element={<Search />} />
+          <Route path="/informacion" element={<About />} />
+        </Routes>
+      </Router>
     </>
   )
 }
