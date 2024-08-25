@@ -3,7 +3,7 @@ import PokemonCard from "./PokemonCard";
 
 export default function PokemonGrid({ pokemons }) {
   return (
-    <div>
+    <div className="pokemon-cuadrícula">
       {pokemons.map((pokemon) => (
         <PokemonCard key={pokemon.id} pokemon={pokemon} />
       ))}
