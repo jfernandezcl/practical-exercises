@@ -7,7 +7,7 @@ export const usePokemon = () => {
   useEffect(() => {
     const fetchPokemons = async () => {
       const responses = await Promise.all(
-        Array.from({ length: 150 }, (_, i) =>
+        Array.from({ length: 20 }, (_, i) =>
           fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}`)
         )
       );
