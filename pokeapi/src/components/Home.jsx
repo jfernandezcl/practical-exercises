@@ -8,10 +8,10 @@ export default function Home() {
   const { pokemons, filterPokemons } = usePokemon()
   return (
     <>
-      <div className="container-search">
+      <div className="home-title">
         <h1>Welcome to he Pokédex</h1>
       </div>
-      <div>
+      <div className="home-search">
         <SearchBar onSearch={filterPokemons} />
       </div>
       <div className="container-home">
