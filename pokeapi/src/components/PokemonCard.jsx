@@ -1,5 +1,10 @@
 import '../css/PokemonCard.css'
 
+function letter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+} // Para la primera letra mayúscula
+
+
 export default function PokemonCard({ pokemon }) {
   return (
     <div className="container-card">
@@ -7,7 +12,7 @@ export default function PokemonCard({ pokemon }) {
         <img className='card-imagen' src={pokemon.image} alt={pokemon.name} />
       </div>
       <div className='container-title'>
-        <p className='card-name'>{pokemon.name}</p>
+        <p className='card-name'>{letter(pokemon.name)}</p>
         <p className='card-type'>Type {pokemon.types}</p>
       </div>
       <div className='container-info'>
