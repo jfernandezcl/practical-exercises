@@ -13,7 +13,7 @@ export default function PokemonCard({ pokemon }) {
       </div>
       <div className='container-title'>
         <p className='card-name'>{letter(pokemon.name)}</p>
-        <p className='card-type'>Type {pokemon.types}</p>
+        <p className='card-type'>Type: {pokemon.types.join(' / ')}</p>
       </div>
       <div className='container-info'>
         <span className='card-size'>H {pokemon.height}</span>
