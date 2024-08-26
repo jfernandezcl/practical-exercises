@@ -1,5 +1,4 @@
 .container-card {
-
   border: 8px solid #4b5563;
   background: linear-gradient(to right, #e5e7eb 34%, #e5e7eb 70%);
   border-radius: 12px;
@@ -23,11 +22,41 @@
   height: 170px;
 }
 
+/*Información de los pokémon (nombre y tipo) */
+.container-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0;
+  line-height: 1;
+  margin-top: 7px;
+
+}
+
 .card-name {
   text-align: start;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 18px;
-  margin: 12px;
-  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: -5px 0;
+}
+
+.card-type {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/*Información pokémon (tamaño) */
+
+.container-info {}
+
+.card-size {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  background-color: white;
+
 }
