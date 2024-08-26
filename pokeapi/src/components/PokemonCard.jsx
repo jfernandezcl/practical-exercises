@@ -12,8 +12,8 @@ export default function PokemonCard({ pokemon }) {
         <img className='card-imagen' src={pokemon.image} alt={pokemon.name} />
       </div>
       <div className='container-title'>
-        <p className='card-name'>{letter(pokemon.name)}</p>
-        <p className='card-type'>Type: {pokemon.types.join(' / ')}</p>
+        <span className='card-name'>{letter(pokemon.name)}</span>
+        <span className='card-type'>Type: {pokemon.types.join(' / ')}</span>
       </div>
       <div className='container-info'>
         <span className='card-size'>H {pokemon.height}</span>
