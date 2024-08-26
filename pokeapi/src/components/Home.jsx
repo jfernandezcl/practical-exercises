@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <div className="home-title">
-        <h1>Welcome to he Pokédex</h1>
+        <h1>Welcome to the Pokédex</h1>
       </div>
       <div className="home-search">
         <SearchBar onSearch={filterPokemons} />
