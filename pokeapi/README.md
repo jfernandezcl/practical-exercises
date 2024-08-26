@@ -19,10 +19,3 @@ Funcionalidades
     7. Desarrollar el Componente Principal (App.jsx).
     8. Configurar el Punto de Entrada (main.jsx).
     9. Añadir Estilos CSS.
-
-
-
-### Anotaciones para cambios
-    // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-    //<img className='img-portada' src={portada} alt='portada' />
