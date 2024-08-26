@@ -12,7 +12,7 @@ export default function PokemonCard({ pokemon }) {
       </div>
       <div className='container-info'>
         <span className='card-size'>H {pokemon.height}</span>
-        <p className='card-size'>W {pokemon.weight}</p>
+        <span className='card-size'>W {pokemon.weight}</span>
       </div>
     </div>
   )
