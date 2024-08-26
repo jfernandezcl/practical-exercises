@@ -12,6 +12,7 @@ export default function PokemonCard({ pokemon }) {
         <img className='card-imagen' src={pokemon.image} alt={pokemon.name} />
       </div>
       <div className='container-title'>
+        <span className='card-id'>{pokemon.id}</span>
         <span className='card-name'>{letter(pokemon.name)}</span>
         <span className='card-type'>Type: {pokemon.types.join(' / ')}</span>
       </div>
