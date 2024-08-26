@@ -1,15 +1,11 @@
 // Utilizar el hook personalizado
 // Organizar la barra de busqueda y cuadrícula
 import PokemonGrid from "./PokemonGrid";
-import SearchBar from "./SearchBar";
-import { usePokemon } from "../hooks/usePokemon";
 
-export default function PokemonList() {
-  const { pokemons, filterPokemons } = usePokemon()
+export default function PokemonList({ pokemons }) {
 
   return (
     <div>
-      <SearchBar onSearch={filterPokemons} />
       <PokemonGrid pokemons={pokemons} />
     </div>
   )
