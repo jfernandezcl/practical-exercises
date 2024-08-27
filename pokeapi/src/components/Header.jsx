@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <header className='container-banner'>
       <div>
-        <img src={logo} alt='logo' />
+        <Link to='/'>
+          <img src={logo} alt='logo' />
+        </Link>
       </div>
       <ul>
         <li>
