@@ -19,3 +19,5 @@ Funcionalidades
     7. Desarrollar el Componente Principal (App.jsx).
     8. Configurar el Punto de Entrada (main.jsx).
     9. Añadir Estilos CSS.
+
+

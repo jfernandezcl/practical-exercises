@@ -17,7 +17,7 @@ export default function About() {
       <div>
         <h3>Fecha y Hora del Proyecto:</h3>
         <ul>
-          <li>Inicio: 27 de agosto de 2024, 14:00h</li>
+          <li>Inicio: 22 de agosto de 2024, 11:00h</li>
           <li>Última Actualización: 27 de agosto de 2024, 12:00h</li>
         </ul>
       </div>
@@ -28,7 +28,7 @@ export default function About() {
           <li>Estilos CSS personalizados para un diseño moderno y agradable.</li>
         </ul>
       </div>
-      <div className='about-list-info'>
+      <div>
         <h3>Resumen del Orden de Implementación:</h3>
         <ul>
           <li>
