@@ -28,7 +28,7 @@ export default function About() {
           <li>Estilos CSS personalizados para un diseño moderno y agradable.</li>
         </ul>
       </div>
-      <div>
+      <div className='about-list-info'>
         <h3>Resumen del Orden de Implementación:</h3>
         <ul>
           <li>
