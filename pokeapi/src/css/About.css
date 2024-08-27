@@ -1,0 +1,9 @@
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2% 25%;
+  line-height: 1.8;
+}
