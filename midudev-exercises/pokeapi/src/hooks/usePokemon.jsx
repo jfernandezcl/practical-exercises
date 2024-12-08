@@ -22,7 +22,7 @@ export const usePokemon = () => {
         height: pokemon.height,
         weight: pokemon.weight,
         types: pokemon.types.map((typeInfo) => typeInfo.type.name),
-        image: pokemon.sprites.front_default, // estructura-detalles del pokémon
+        image: pokemon.sprites.other.home.front_default // estructura-detalles del pokémon
       }))
       setPokemons(formattedData);
       setFilteredPokemons(formattedData);
