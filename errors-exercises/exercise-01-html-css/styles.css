@@ -1,0 +1,7 @@
+/* Queremos que el encabezado tenga fondo azul y texto blanco, pero algo no funciona */
+header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
